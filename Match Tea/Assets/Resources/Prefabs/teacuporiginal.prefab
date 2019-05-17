@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8015511620233947448}
   - component: {fileID: 9189180814006919041}
   - component: {fileID: -3280801983027449045}
-  - component: {fileID: -8977635934576585257}
+  - component: {fileID: 7656451916077722198}
   m_Layer: 0
   m_Name: teacuporiginal
   m_TagString: Untagged
@@ -90,22 +90,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4791716870267738728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 689a65483f1e81d489a09bd75edb0c7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ec7eb22c958786545b577a2a7b4f3ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &-8977635934576585257
-Rigidbody:
+  startY: 7
+  minY: -7
+  xRange: 7
+--- !u!50 &7656451916077722198
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4791716870267738728}
-  serializedVersion: 2
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
   m_Mass: 1
-  m_Drag: 0
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_Constraints: 0
+  m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
