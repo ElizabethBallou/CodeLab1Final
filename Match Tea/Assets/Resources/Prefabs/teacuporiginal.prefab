@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8015511620233947448}
   - component: {fileID: 9189180814006919041}
+  - component: {fileID: -3280801983027449045}
   m_Layer: 0
-  m_Name: teacup1
+  m_Name: teacuporiginal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4791716870267738728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2158, y: 0.19797, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bae6b419813e87247ad93236dca76b13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -79,3 +80,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3280801983027449045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4791716870267738728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689a65483f1e81d489a09bd75edb0c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteList:
+  - {fileID: 21300000, guid: bae6b419813e87247ad93236dca76b13, type: 3}
+  - {fileID: 21300000, guid: e0aa82e16110394439d136f93777d13d, type: 3}
+  - {fileID: 21300000, guid: 975335a52763e764ba9c86813b9813eb, type: 3}
+  - {fileID: 21300000, guid: 37b68afc9ed80d547af0e8ff76f98915, type: 3}
