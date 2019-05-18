@@ -30,4 +30,15 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = newVelocity;
     }
+    
+   //a function that destroys any teacups that collide with the bin
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("teacup"))
+        {
+            Debug.Log("A teacup hit the bin!");
+            Destroy(other.gameObject);
+            GameManager.instance.IncreaseScore();
+        }
+    }
 }
