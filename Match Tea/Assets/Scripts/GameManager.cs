@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
         
         _teacupPool = GameObject.Find("TeacupPool").GetComponent<TeacupPool>(); //get the teacup pool
         targetTeacupHolder.sprite = _teacupPool.SpriteList[Random.Range(0, _teacupPool.SpriteList.Count)];
+        StartCoroutine("ChangeTargetTeacup");
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(ChangeTargetTeacup(5f));
     }
 
     public void IncreaseScore()
@@ -57,9 +57,10 @@ public class GameManager : MonoBehaviour
         score.text = "score " + scoreNumber;
     }
 
-    IEnumerator ChangeTargetTeacup(float seconds)
+    IEnumerator ChangeTargetTeacup()
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(5f);
         targetTeacupHolder.sprite = _teacupPool.SpriteList[Random.Range(0, _teacupPool.SpriteList.Count)];
+        StartCoroutine("ChangeTargetTeacup");
     }
 }

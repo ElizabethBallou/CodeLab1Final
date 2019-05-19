@@ -6,11 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     Rigidbody2D rb;
+    private GameManager _gameManager;
+    private TeacupPool _teacupPool2;
+
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //get the game manager
+        _teacupPool2 = GameObject.Find("TeacupPool").GetComponent<TeacupPool>(); //get the teacup pool
+
     }
 
     // Update is called once per frame
