@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - teacup
+  - score
   layers:
   - Default
   - TransparentFX

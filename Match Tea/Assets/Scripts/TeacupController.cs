@@ -16,7 +16,7 @@ public class TeacupController : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        teacupPool = GameObject.Find("PoolHolder").GetComponent<TeacupPool>(); //get the box pool
+        teacupPool = GameObject.Find("TeacupPool").GetComponent<TeacupPool>(); //get the box pool
         Reset();
     }
 
