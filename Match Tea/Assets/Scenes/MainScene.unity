@@ -1840,12 +1840,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 691833822}
-  life1: {fileID: 0}
-  life2: {fileID: 0}
-  life3: {fileID: 0}
+  life1: {fileID: 710602255}
+  life2: {fileID: 1920922826}
+  life3: {fileID: 209755811}
   minY: -7
   targetTeacupHolder: {fileID: 1310403940}
-  teacupPool: {fileID: 1454742771}
 --- !u!4 &1737867745
 Transform:
   m_ObjectHideFlags: 0

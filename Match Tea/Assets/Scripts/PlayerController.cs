@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,14 +38,26 @@ public class PlayerController : MonoBehaviour
         rb.velocity = newVelocity;
     }
     
-   //a function that destroys any teacups that collide with the bin
+   //a function that destroys teacups that match the target image
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("teacup"))
         {
-            Debug.Log("A teacup hit the bin!");
-            Destroy(other.gameObject);
-            GameManager.instance.IncreaseScore();
+            Debug.Log("A teacup hit the bin!"); //this checks to see whether ANY teacup hit the bin
+            
+            if (other.gameObject.GetComponent<SpriteRenderer>().sprite ==
+                _gameManager.targetTeacupHolder.GetComponent<Image>().sprite) //if the source sprite on the object that has been collided with matches the source sprite on the target image
+            {
+                Debug.Log("The target kind of teacup hit the bin!");
+                Destroy(other.gameObject);
+                GameManager.instance.IncreaseScore();
+            }
+
+            if (other.gameObject.GetComponent<SpriteRenderer>().sprite !=
+                _gameManager.targetTeacupHolder.GetComponent<Image>().sprite)
+            {
+                Debug.Log("Aww, you messed up");
+            }
         }
     }
 }
