@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
                 _gameManager.targetTeacupHolder.GetComponent<Image>().sprite)
             {
                 Debug.Log("Aww, you messed up");
+                Destroy(other.gameObject);
+                _gameManager.lifeCounter--;
             }
         }
     }
