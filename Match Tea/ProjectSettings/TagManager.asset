@@ -6,6 +6,7 @@ TagManager:
   tags:
   - teacup
   - score
+  - entryTemplate
   layers:
   - Default
   - TransparentFX

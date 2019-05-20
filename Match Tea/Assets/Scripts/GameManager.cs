@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public int lifeCounter;
     
     public Image targetTeacupHolder; //the space where the target teacup image will be loaded
+    public Image teacupBackground;
     
     
     // Start is called before the first frame update
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
                 life2.gameObject.SetActive(false);
                 life3.gameObject.SetActive(false);
                 targetTeacupHolder.gameObject.SetActive(false);
+                teacupBackground.gameObject.SetActive(false);
                 scoreText.gameObject.SetActive(false);
                 lifeText.gameObject.SetActive(false);
                 toCatchText.gameObject.SetActive(false);
@@ -101,5 +104,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         targetTeacupHolder.sprite = _teacupPool.SpriteList[Random.Range(0, _teacupPool.SpriteList.Count)];
         StartCoroutine("ChangeTargetTeacup");
+    }
+
+    public void LoadScoreList()
+    {
+        SceneManager.LoadScene("ScoreList");
     }
 }
