@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public int lifeCounter;
     public TextMeshProUGUI lifeText;
     public TextMeshProUGUI overallHighScore;
+    public GameObject quitButton;
     public GameObject reloadButton;
 
     private int scoreNumber; //the score number
@@ -155,6 +156,7 @@ public class GameManager : MonoBehaviour
         yourScore.gameObject.SetActive(true);
         overallHighScore.gameObject.SetActive(true);
         reloadButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
         Destroy(endButton);
 
         yourScore.text = "Your Score: " + scoreNumber;
