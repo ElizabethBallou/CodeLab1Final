@@ -15,23 +15,25 @@ public class GameManager : MonoBehaviour
     private AudioClip bonkSound;
     private GameObject dishbin;
     public GameObject endButton;
-    private int highScore; //the high score number
+
+
+    private int highScoreNumber; //the high score number
 
     public Image life1; //the hearts that represent lives
     public Image life2;
     public Image life3;
-    public int lifeCounter;
+    public int lifeCounter; //the int that keeps track of lives
     public TextMeshProUGUI lifeText;
     public TextMeshProUGUI overallHighScore;
     public GameObject quitButton;
     public GameObject reloadButton;
-
     private int scoreNumber; //the score number
+
 
     public TextMeshProUGUI scoreText; //the text that will hold the score
 
     public Image targetTeacupHolder; //the space where the target teacup image will be loaded
-    public Image teacupBackground;
+    public Image teacupBackground; //the UI box behind the teacup
     public TextMeshProUGUI toCatchText;
 
     public TextMeshProUGUI yourScore;
@@ -49,15 +51,17 @@ public class GameManager : MonoBehaviour
 
     public int HighScore //singleton pattern setting the high score
     {
-        get => highScore;
+        get => highScoreNumber;
         set
         {
-            if (value > highScore)
-                highScore = value;
-            //PlayerPrefs.SetInt(PLAYER_PREF_HIGHSCORE, highScore);
-            //Debug.Log("Application.dataPath: " + Application.dataPath);
-            // string fullPathToFile = Application.dataPath + FILE_HIGH_SCORE;
-            //File.WriteAllText(fullPathToFile, "Writing to file...");
+            if (value > highScoreNumber)
+            {
+                highScoreNumber = value;
+                PlayerPrefs.SetInt(PLAYER_PREF_HIGHSCORE, highScoreNumber);
+                //Debug.Log("Application.dataPath: " + Application.dataPath);
+                // string fullPathToFile = Application.dataPath + FILE_HIGH_SCORE;
+                //File.WriteAllText(fullPathToFile, "Writing to file...");
+            }
         }
     }
 
@@ -89,6 +93,8 @@ public class GameManager : MonoBehaviour
         lifeCounter = 3; //set the number of lives to 3
 
         dishbin = GameObject.FindWithTag("Player");
+
+        highScoreNumber = PlayerPrefs.GetInt("highScore", 0);
         /*
         string highScoreFileTxt = File.ReadAllText(Application.dataPath + FILE_HIGH_SCORE);
         string[] scoreSplit = highScoreFileTxt.Split(' ');
@@ -159,7 +165,14 @@ public class GameManager : MonoBehaviour
         quitButton.gameObject.SetActive(true);
         Destroy(endButton);
 
+        highScoreNumber = PlayerPrefs.GetInt("highScore", 0);
+        if (scoreNumber > highScoreNumber)
+        {
+            PlayerPrefs.SetInt("highScore", scoreNumber);
+            highScoreNumber = scoreNumber;
+        }
+
         yourScore.text = "Your Score: " + scoreNumber;
-        overallHighScore.text = "High Score: " + HighScore;
+        overallHighScore.text = "High Score: " + highScoreNumber;
     }
 }

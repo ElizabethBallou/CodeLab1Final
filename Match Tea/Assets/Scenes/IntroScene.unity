@@ -1214,8 +1214,8 @@ MonoBehaviour:
     at a time? Because I said so.)
 
 
-    Catching the teacup color at the top of the screen gets you points, but catching
-    the wrong color means you lose a life.
+    Control the dish bin using A and D. Catching the teacup color at the top of the
+    screen gets you points, but catching the wrong color means you lose a life.
 
 
     This is busboy stakes like you''ve never seen.'
@@ -1247,13 +1247,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 264
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 289
+  m_firstOverflowCharacterIndex: 329
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1288,12 +1288,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1359868938}
-    characterCount: 352
+    characterCount: 388
     spriteCount: 0
-    spaceCount: 71
-    wordCount: 70
+    spaceCount: 79
+    wordCount: 78
     linkCount: 0
-    lineCount: 10
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 2103073244}
   m_TextComponent: {fileID: 1359868938}
   m_materialReferenceIndex: 1
